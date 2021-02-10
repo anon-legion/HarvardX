@@ -10,7 +10,7 @@ from tensorflow import keras
 data = tf.keras.datasets.mnist
 (training_images, training_labels), (eval_images, eval_labels) = data.load_data()   # load data sets
 training_images = training_images / 255.0   # normalize the training data to be a value between 1 and 0
-eval_images = eval_images / 255.0           # normalize the evaluation data to be a value between 1 and 0
+eval_images = eval_images / 255.0           # RGB data format uses values in the range [0,255] to represent each color and so dividing the color values by 255 will result in the data falling in the range [0,1]
 
 layer1 = keras.layers.Dense(units=20, activation=tf.nn.relu)      # define 1st layer with 20 neurons and change any output <0 to 0 (Rectified Linear Model)
 layer2 = keras.layers.Dense(units=10, activation=tf.nn.softmax)   # define 2nd layer with 10 neurons and to output only the neuron with the highest value
