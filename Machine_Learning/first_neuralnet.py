@@ -5,7 +5,7 @@ Created on Sun Feb  7 09:58:48 2021
 @author: =GV=
 """
 import tensorflow as tf
-import keras
+from tensorflow import keras
 import numpy as np
 import math
 import matplotlib.pyplot as plt

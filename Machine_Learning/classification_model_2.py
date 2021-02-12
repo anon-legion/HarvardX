@@ -26,7 +26,7 @@ model_1.fit(training_images, training_labels, validation_data=(eval_images, eval
 target_accuracy = model_1.evaluate(eval_images, eval_labels)[-1]
 print(f'\n Model 1 accuracy = {target_accuracy}')
 
-# 2nd model
+# 2nd model (Deep Neuralnet)
 m2_layer1 = keras.layers.Dense(units=28, activation=tf.nn.relu)
 m2_layer2 = keras.layers.Dense(units=512, activation=tf.nn.relu)    # hidden layer
 m2_layer3 = keras.layers.Dense(units=10, activation=tf.nn.softmax)
